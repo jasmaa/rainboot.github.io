@@ -1,0 +1,14 @@
+{
+  "name": "rainboot.css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "sass -w src/index.scss:build/rainboot.css",
+    "build": "sass src/index.scss:build/rainboot.css"
+  },
+  "dependencies": {
+    "@cloudscape-design/design-tokens": "^3.0.31",
+    "bootstrap": "^5.3.2"
+  }
+}

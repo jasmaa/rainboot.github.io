@@ -1,0 +1,40 @@
+@use "../node_modules/@cloudscape-design/design-tokens/index.scss" as awsui;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.btn {
+  --bs-btn-border-radius: #{awsui.$border-radius-button};
+  --bs-btn-font-family: #{awsui.$font-family-base};
+  --bs-btn-font-size: 0.9rem;
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.3rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-width: 2px;
+}
+
+.btn-primary {
+  --bs-btn-bg: #{awsui.$color-background-button-primary-default};
+  --bs-btn-border-color: #{awsui.$color-background-button-primary-default};
+  --bs-btn-hover-bg: #{awsui.$color-background-button-primary-hover};
+  --bs-btn-hover-border-color: #{awsui.$color-background-button-primary-hover};
+  --bs-btn-active-bg: #{awsui.$color-background-button-primary-active};
+  --bs-btn-active-border-color: #{awsui.$color-background-button-primary-active};
+  --bs-btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: border color is not color?
+  --bs-btn-disabled-bg: #{awsui.$color-background-button-primary-disabled};
+  --bs-btn-disabled-border-color: #{awsui.$color-background-button-primary-disabled};
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #{awsui.$color-border-button-normal-default};
+  --bs-btn-bg: #{awsui.$color-background-button-normal-default};
+  --bs-btn-border-color: #{awsui.$color-border-button-normal-default};
+  --bs-btn-hover-color: #{awsui.$color-border-button-normal-hover};
+  --bs-btn-hover-bg: #{awsui.$color-background-button-normal-hover};
+  --bs-btn-hover-border-color: #{awsui.$color-border-button-normal-hover};
+  --bs-btn-active-color: #{awsui.$color-border-button-normal-active};
+  --bs-btn-active-bg: #{awsui.$color-background-button-normal-active};
+  --bs-btn-active-border-color: #{awsui.$color-border-button-normal-active};
+  --bs-btn-disabled-color: #{awsui.$color-border-button-normal-disabled};
+  --bs-btn-disabled-bg: #{awsui.$color-background-button-normal-disabled};
+  --bs-btn-disabled-border-color: #{awsui.$color-border-button-normal-disabled};
+}
