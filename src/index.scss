@@ -1,6 +1,6 @@
-@use "../node_modules/@cloudscape-design/design-tokens/index.scss" as awsui;
+@use "@cloudscape-design/design-tokens/index.scss" as awsui;
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/bootstrap.scss";
 
 $color-border-button-outline-secondary-active: $gray-800;
 $color-border-button-outline-secondary-hover: $gray-800;

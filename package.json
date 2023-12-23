@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "sass -w src/index.scss:build/rainboot.css",
-    "build": "sass src/index.scss:build/rainboot.css"
+    "start": "sass -w src/index.scss:build/rainboot.css --load-path=node_modules",
+    "build": "sass src/index.scss:build/rainboot.css --load-path=node_modules",
+    "clean": "rimraf build/rainboot.css build/rainboot.css.map"
   },
-  "dependencies": {
+  "devDependencies": {
     "@cloudscape-design/design-tokens": "^3.0.31",
-    "bootstrap": "^5.3.2"
+    "bootstrap": "^5.3.2",
+    "rimraf": "^5.0.5"
   }
 }
