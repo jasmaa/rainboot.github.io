@@ -1,11 +1,10 @@
 {
   "name": "rainboot.css",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
-    "start": "sass -w src/index.scss:build/rainboot.css --load-path=node_modules",
-    "build": "sass src/index.scss:build/rainboot.css --load-path=node_modules",
+    "start": "sass -w src/rainboot.scss:build/rainboot.css --load-path=node_modules",
+    "build": "sass src/rainboot.scss:build/rainboot.css --load-path=node_modules",
     "clean": "rimraf build/rainboot.css build/rainboot.css.map"
   },
   "devDependencies": {
