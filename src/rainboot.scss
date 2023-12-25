@@ -1,6 +1,22 @@
 @use "@cloudscape-design/design-tokens" as awsui;
 @use "tokens" as tokens;
 
+$btn-border-radius: awsui.$border-radius-button;
+$btn-font-family: awsui.$font-family-base;
+$btn-padding-x: 1.25rem;
+$btn-padding-y: 0.3rem;
+$btn-font-size: 0.9rem;
+$btn-font-weight: 600;
+$btn-border-width: 2px;
+
+$badge-font-size: 0.8em;
+$badge-font-weight: 400;
+$badge-border-radius: awsui.$border-radius-badge;
+
+$card-spacer-x: awsui.$space-container-horizontal;
+$card-bg: awsui.$color-background-container-content;
+$card-border-radius: awsui.$border-radius-container;
+
 $input-bg: awsui.$color-background-input-default;
 $input-border-color: awsui.$color-border-input-default;
 $input-border-width: 0.15rem;
@@ -17,16 +33,6 @@ $form-label-color: awsui.$color-text-form-default;
 $form-label-font-weight: 700;
 
 @import "bootstrap/scss/bootstrap";
-
-.btn {
-  --#{$prefix}btn-border-radius: #{awsui.$border-radius-button};
-  --#{$prefix}btn-font-family: #{awsui.$font-family-base};
-  --#{$prefix}btn-font-size: 0.9rem;
-  --#{$prefix}btn-padding-x: 1.25rem;
-  --#{$prefix}btn-padding-y: 0.3rem;
-  --#{$prefix}btn-font-weight: 600;
-  --#{$prefix}btn-border-width: 2px;
-}
 
 .btn-primary {
   --#{$prefix}btn-color: #{awsui.$color-text-button-primary-default};
@@ -121,18 +127,6 @@ $form-label-font-weight: 700;
   --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-dark-active};
 }
 
-.badge {
-  --#{$prefix}badge-font-size: 0.8em;
-  --#{$prefix}badge-font-weight: 400;
-  --#{$prefix}badge-border-radius: #{awsui.$border-radius-badge};
-}
-
 .bg-primary {
   background-color: #{awsui.$color-background-notification-blue} !important;
-}
-
-.card {
-  --#{$prefix}card-spacer-x: #{awsui.$space-container-horizontal};
-  --#{$prefix}card-bg: #{awsui.$color-background-container-content};
-  --#{$prefix}card-border-radius: #{awsui.$border-radius-container};
 }
