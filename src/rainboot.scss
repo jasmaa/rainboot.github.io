@@ -1,6 +1,21 @@
 @use "@cloudscape-design/design-tokens" as awsui;
 @use "tokens" as tokens;
 
+$input-bg: awsui.$color-background-input-default;
+$input-border-color: awsui.$color-border-input-default;
+$input-border-width: 0.15rem;
+$input-border-radius: 0.5rem;
+$input-color: awsui.$color-text-form-default;
+$input-placeholder-color: awsui.$color-text-input-placeholder;
+$input-disabled-bg: awsui.$color-background-input-disabled;
+$input-disabled-border-color: transparent;
+$input-focus-border-color: awsui.$color-border-item-selected;
+$enable-shadows: false;
+$input-focus-box-shadow: none;
+
+$form-label-color: awsui.$color-text-form-default;
+$form-label-font-weight: 700;
+
 @import "bootstrap/scss/bootstrap";
 
 .btn {
