@@ -33,6 +33,7 @@ $form-label-color: awsui.$color-text-form-default;
 $form-label-font-weight: 700;
 
 $form-select-focus-box-shadow: none;
+$form-select-disabled-color: awsui.$color-text-input-disabled;
 $form-select-indicator-color: black;
 $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon class='filled stroke-linejoin-round' fill='#{$form-select-indicator-color}' points='2 3 14 3 8 13 2 3'/></svg>");
 
