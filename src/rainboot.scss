@@ -37,6 +37,12 @@ $form-select-disabled-color: awsui.$color-text-input-disabled;
 $form-select-indicator-color: black;
 $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon class='filled stroke-linejoin-round' fill='#{$form-select-indicator-color}' points='2 3 14 3 8 13 2 3'/></svg>");
 
+$form-check-input-width: 1.2em;
+$form-check-input-border: 2px solid #{awsui.$color-border-control-default};
+$form-check-input-focus-box-shadow: none;
+$form-check-input-checked-color: #{awsui.$color-foreground-control-default};
+$form-check-input-checked-bg-color: #{awsui.$color-background-control-checked};
+
 @import "bootstrap/scss/bootstrap";
 
 .btn-primary {
@@ -134,4 +140,18 @@ $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 
 .bg-primary {
   background-color: #{awsui.$color-background-notification-blue} !important;
+}
+
+.form-check-input {
+  &:disabled {
+    opacity: inherit;
+    background-color: #{awsui.$color-background-control-disabled};
+    background-image: none;
+    border: none;
+
+    ~.form-check-label {
+      opacity: inherit;
+      color: #{awsui.$color-background-control-disabled};
+    }
+  }
 }
