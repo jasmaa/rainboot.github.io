@@ -1,6 +1,8 @@
 @use "@cloudscape-design/design-tokens" as awsui;
 @use "tokens" as tokens;
 
+@import "bootstrap/scss/functions";
+
 $btn-border-radius: awsui.$border-radius-button;
 $btn-font-family: awsui.$font-family-base;
 $btn-padding-x: 1.25rem;
@@ -42,6 +44,20 @@ $form-check-input-border: 2px solid #{awsui.$color-border-control-default};
 $form-check-input-focus-box-shadow: none;
 $form-check-input-checked-color: #{awsui.$color-foreground-control-default};
 $form-check-input-checked-bg-color: #{awsui.$color-background-control-checked};
+
+$form-feedback-icon-valid: none;
+$form-feedback-icon-invalid: none;
+
+@import "bootstrap/scss/variables";
+
+$form-validation-states: map-merge($form-validation-states, (
+  "valid": map-merge(map-get($form-validation-states, "valid"), (
+    "focus-box-shadow": none,
+  )),
+  "invalid": map-merge(map-get($form-validation-states, "invalid"), (
+    "focus-box-shadow": none,
+  )),
+));
 
 @import "bootstrap/scss/bootstrap";
 
@@ -154,4 +170,8 @@ $form-check-input-checked-bg-color: #{awsui.$color-background-control-checked};
       color: #{awsui.$color-background-control-disabled};
     }
   }
+}
+
+.form-control.is-invalid {
+  border-left-width: 0.6rem;
 }
