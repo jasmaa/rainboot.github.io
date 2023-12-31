@@ -159,10 +159,6 @@ $form-validation-states: map-merge($form-validation-states, (
   --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-dark-active};
 }
 
-.bg-primary {
-  background-color: #{awsui.$color-background-notification-blue} !important;
-}
-
 .form-check-input {
   &:disabled {
     opacity: inherit;
@@ -238,4 +234,16 @@ $alert-map: (
       content: "";
     }
   }
+}
+
+.badge.bg-primary {
+  background-color: #{awsui.$color-background-notification-blue} !important;
+}
+
+.badge.bg-success {
+  background-color: #{awsui.$color-background-notification-green} !important;
+}
+
+.badge.bg-danger {
+  background-color: #{awsui.$color-background-notification-red} !important;
 }
