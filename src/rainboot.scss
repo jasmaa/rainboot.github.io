@@ -5,22 +5,6 @@ $icon-stroke-width: 1.8;
 
 @import "bootstrap/scss/functions";
 
-$btn-border-radius: awsui.$border-radius-button;
-$btn-font-family: awsui.$font-family-base;
-$btn-padding-x: 1.25rem;
-$btn-padding-y: 0.3rem;
-$btn-font-size: 0.9rem;
-$btn-font-weight: 600;
-$btn-border-width: 2px;
-
-$badge-font-size: 0.8em;
-$badge-font-weight: 400;
-$badge-border-radius: awsui.$border-radius-badge;
-
-$card-spacer-x: awsui.$space-container-horizontal;
-$card-bg: awsui.$color-background-container-content;
-$card-border-radius: awsui.$border-radius-container;
-
 $input-bg: awsui.$color-background-input-default;
 $input-border-color: awsui.$color-border-input-default;
 $input-border-width: 0.15rem;
@@ -56,6 +40,31 @@ $alert-border-width: 0.15rem;
 $breadcrumb-divider-color: #{awsui.$color-text-breadcrumb-icon};
 $breadcrumb-active-color: #{awsui.$color-text-breadcrumb-current};
 
+$badge-font-size: 0.8em;
+$badge-font-weight: 400;
+$badge-border-radius: awsui.$border-radius-badge;
+
+$btn-border-radius: awsui.$border-radius-button;
+$btn-font-family: awsui.$font-family-base;
+$btn-padding-x: 1.25rem;
+$btn-padding-y: 0.3rem;
+$btn-font-size: 0.9rem;
+$btn-font-weight: 600;
+$btn-border-width: 2px;
+
+$card-spacer-x: awsui.$space-container-horizontal;
+$card-bg: awsui.$color-background-container-content;
+$card-border-radius: awsui.$border-radius-container;
+
+$btn-close-focus-shadow: none;
+
+$list-group-bg: awsui.$color-background-container-content;
+$list-group-border-radius: awsui.$border-radius-container;
+$list-group-active-color: awsui.$color-text-button-primary-default;
+$list-group-active-bg: awsui.$color-background-button-primary-default;
+$list-group-disabled-color: awsui.$color-border-button-normal-disabled; // TODO: no disabled text color from awsui
+$list-group-disabled-bg: awsui.$color-background-button-primary-disabled;
+
 @import "bootstrap/scss/variables";
 
 $form-validation-states: map-merge($form-validation-states, (
@@ -68,99 +77,6 @@ $form-validation-states: map-merge($form-validation-states, (
 ));
 
 @import "bootstrap/scss/bootstrap";
-
-.btn-primary {
-  --#{$prefix}btn-color: #{awsui.$color-text-button-primary-default};
-  --#{$prefix}btn-bg: #{awsui.$color-background-button-primary-default};
-  --#{$prefix}btn-border-color: #{awsui.$color-background-button-primary-default};
-  --#{$prefix}btn-hover-color: #{awsui.$color-text-button-primary-hover};
-  --#{$prefix}btn-hover-bg: #{awsui.$color-background-button-primary-hover};
-  --#{$prefix}btn-hover-border-color: #{awsui.$color-background-button-primary-hover};
-  --#{$prefix}btn-active-color: #{awsui.$color-text-button-primary-active};
-  --#{$prefix}btn-active-bg: #{awsui.$color-background-button-primary-active};
-  --#{$prefix}btn-active-border-color: #{awsui.$color-background-button-primary-active};
-  --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
-  --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-primary-disabled};
-  --#{$prefix}btn-disabled-border-color: #{awsui.$color-background-button-primary-disabled};
-}
-
-.btn-outline-primary {
-  --#{$prefix}btn-color: #{awsui.$color-text-button-normal-default};
-  --#{$prefix}btn-bg: #{awsui.$color-background-button-normal-default};
-  --#{$prefix}btn-border-color: #{awsui.$color-border-button-normal-default};
-  --#{$prefix}btn-hover-color: #{awsui.$color-text-button-normal-hover};
-  --#{$prefix}btn-hover-bg: #{awsui.$color-background-button-normal-hover};
-  --#{$prefix}btn-hover-border-color: #{awsui.$color-border-button-normal-hover};
-  --#{$prefix}btn-active-color: #{awsui.$color-text-button-normal-active};
-  --#{$prefix}btn-active-bg: #{awsui.$color-background-button-normal-active};
-  --#{$prefix}btn-active-border-color: #{awsui.$color-border-button-normal-active};
-  --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
-  --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-normal-disabled};
-  --#{$prefix}btn-disabled-border-color: #{awsui.$color-border-button-normal-disabled};
-}
-
-.btn-outline-secondary {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-secondary-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-secondary-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-secondary-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-secondary-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-secondary-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-secondary-active};
-}
-
-.btn-outline-info {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-info-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-info-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-info-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-info-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-info-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-info-active};
-}
-
-.btn-outline-success {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-success-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-success-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-success-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-success-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-success-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-success-active};
-}
-
-.btn-outline-warning {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-warning-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-warning-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-warning-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-warning-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-warning-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-warning-active};
-}
-
-.btn-outline-danger {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-danger-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-danger-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-danger-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-danger-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-danger-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-danger-active};
-}
-
-.btn-outline-light {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-light-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-light-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-light-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-light-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-light-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-light-active};
-}
-
-.btn-outline-dark {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-dark-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-dark-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-dark-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-dark-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-dark-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-dark-active};
-}
 
 .form-check-input {
   &:disabled {
@@ -260,4 +176,97 @@ $alert-map: (
   width: 1.2rem;
   height: 1.2rem;
   content: "";
+}
+
+.btn-primary {
+  --#{$prefix}btn-color: #{awsui.$color-text-button-primary-default};
+  --#{$prefix}btn-bg: #{awsui.$color-background-button-primary-default};
+  --#{$prefix}btn-border-color: #{awsui.$color-background-button-primary-default};
+  --#{$prefix}btn-hover-color: #{awsui.$color-text-button-primary-hover};
+  --#{$prefix}btn-hover-bg: #{awsui.$color-background-button-primary-hover};
+  --#{$prefix}btn-hover-border-color: #{awsui.$color-background-button-primary-hover};
+  --#{$prefix}btn-active-color: #{awsui.$color-text-button-primary-active};
+  --#{$prefix}btn-active-bg: #{awsui.$color-background-button-primary-active};
+  --#{$prefix}btn-active-border-color: #{awsui.$color-background-button-primary-active};
+  --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
+  --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-primary-disabled};
+  --#{$prefix}btn-disabled-border-color: #{awsui.$color-background-button-primary-disabled};
+}
+
+.btn-outline-primary {
+  --#{$prefix}btn-color: #{awsui.$color-text-button-normal-default};
+  --#{$prefix}btn-bg: #{awsui.$color-background-button-normal-default};
+  --#{$prefix}btn-border-color: #{awsui.$color-border-button-normal-default};
+  --#{$prefix}btn-hover-color: #{awsui.$color-text-button-normal-hover};
+  --#{$prefix}btn-hover-bg: #{awsui.$color-background-button-normal-hover};
+  --#{$prefix}btn-hover-border-color: #{awsui.$color-border-button-normal-hover};
+  --#{$prefix}btn-active-color: #{awsui.$color-text-button-normal-active};
+  --#{$prefix}btn-active-bg: #{awsui.$color-background-button-normal-active};
+  --#{$prefix}btn-active-border-color: #{awsui.$color-border-button-normal-active};
+  --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
+  --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-normal-disabled};
+  --#{$prefix}btn-disabled-border-color: #{awsui.$color-border-button-normal-disabled};
+}
+
+.btn-outline-secondary {
+  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-secondary-hover};
+  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-secondary-hover};
+  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-secondary-hover};
+  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-secondary-active};
+  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-secondary-active};
+  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-secondary-active};
+}
+
+.btn-outline-info {
+  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-info-hover};
+  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-info-hover};
+  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-info-hover};
+  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-info-active};
+  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-info-active};
+  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-info-active};
+}
+
+.btn-outline-success {
+  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-success-hover};
+  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-success-hover};
+  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-success-hover};
+  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-success-active};
+  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-success-active};
+  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-success-active};
+}
+
+.btn-outline-warning {
+  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-warning-hover};
+  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-warning-hover};
+  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-warning-hover};
+  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-warning-active};
+  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-warning-active};
+  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-warning-active};
+}
+
+.btn-outline-danger {
+  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-danger-hover};
+  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-danger-hover};
+  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-danger-hover};
+  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-danger-active};
+  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-danger-active};
+  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-danger-active};
+}
+
+.btn-outline-light {
+  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-light-hover};
+  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-light-hover};
+  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-light-hover};
+  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-light-active};
+  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-light-active};
+  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-light-active};
+}
+
+.btn-outline-dark {
+  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-dark-hover};
+  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-dark-hover};
+  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-dark-hover};
+  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-dark-active};
+  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-dark-active};
+  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-dark-active};
 }
