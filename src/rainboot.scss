@@ -65,6 +65,10 @@ $list-group-active-bg: awsui.$color-background-button-primary-default;
 $list-group-disabled-color: awsui.$color-border-button-normal-disabled; // TODO: no disabled text color from awsui
 $list-group-disabled-bg: awsui.$color-background-button-primary-disabled;
 
+$modal-content-border-radius: awsui.$border-radius-container;
+$modal-header-border-width: 0rem;
+$modal-footer-border-width: 0.08rem;
+
 @import "bootstrap/scss/variables";
 
 $form-validation-states: map-merge($form-validation-states, (
