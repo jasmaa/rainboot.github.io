@@ -17,7 +17,9 @@ $h5-font-size: awsui.$font-size-heading-xs;
 $h6-font-size: awsui.$font-size-heading-xs; // h6 doesn't exist in cloudscape
 
 // Table
-// TODO: add table
+$table-cell-padding-y: 0.8rem;
+$table-active-color: inherit;
+$table-active-bg: awsui.$color-background-item-selected;
 
 // Form
 
@@ -338,4 +340,8 @@ $alert-map: (
   --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-dark-active};
   --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-dark-active};
   --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-dark-active};
+}
+
+.table-active {
+  border: 0.15rem solid #{awsui.$color-border-item-selected} !important;
 }
