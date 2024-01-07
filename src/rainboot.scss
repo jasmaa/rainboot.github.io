@@ -1,11 +1,11 @@
 @use "@cloudscape-design/design-tokens" as awsui;
-@use "tokens" as tokens;
 
 $icon-stroke-width: 1.8;
 
 @import "bootstrap/scss/functions";
 
 // Typography
+
 $font-family-base: awsui.$font-family-base;
 $font-family-monospace: awsui.$font-family-monospace;
 $headings-font-weight: awsui.$font-weight-heading-xl;
@@ -17,6 +17,7 @@ $h5-font-size: awsui.$font-size-heading-xs;
 $h6-font-size: awsui.$font-size-heading-xs; // h6 doesn't exist in cloudscape
 
 // Table
+
 $table-cell-padding-y: 0.8rem;
 $table-active-color: inherit;
 $table-active-bg: awsui.$color-background-item-selected;
@@ -244,97 +245,47 @@ $alert-map: (
 
 // Button
 
-.btn-primary {
-  --#{$prefix}btn-color: #{awsui.$color-text-button-primary-default};
-  --#{$prefix}btn-bg: #{awsui.$color-background-button-primary-default};
-  --#{$prefix}btn-border-color: #{awsui.$color-background-button-primary-default};
-  --#{$prefix}btn-hover-color: #{awsui.$color-text-button-primary-hover};
-  --#{$prefix}btn-hover-bg: #{awsui.$color-background-button-primary-hover};
-  --#{$prefix}btn-hover-border-color: #{awsui.$color-background-button-primary-hover};
-  --#{$prefix}btn-active-color: #{awsui.$color-text-button-primary-active};
-  --#{$prefix}btn-active-bg: #{awsui.$color-background-button-primary-active};
-  --#{$prefix}btn-active-border-color: #{awsui.$color-background-button-primary-active};
-  --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
-  --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-primary-disabled};
-  --#{$prefix}btn-disabled-border-color: #{awsui.$color-background-button-primary-disabled};
-}
+@each $color, $value in $theme-colors {
+  @if $color == "primary" {
+    .btn-primary {
+      --#{$prefix}btn-color: #{awsui.$color-text-button-primary-default};
+      --#{$prefix}btn-bg: #{awsui.$color-background-button-primary-default};
+      --#{$prefix}btn-border-color: #{awsui.$color-background-button-primary-default};
+      --#{$prefix}btn-hover-color: #{awsui.$color-text-button-primary-hover};
+      --#{$prefix}btn-hover-bg: #{awsui.$color-background-button-primary-hover};
+      --#{$prefix}btn-hover-border-color: #{awsui.$color-background-button-primary-hover};
+      --#{$prefix}btn-active-color: #{awsui.$color-text-button-primary-active};
+      --#{$prefix}btn-active-bg: #{awsui.$color-background-button-primary-active};
+      --#{$prefix}btn-active-border-color: #{awsui.$color-background-button-primary-active};
+      --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
+      --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-primary-disabled};
+      --#{$prefix}btn-disabled-border-color: #{awsui.$color-background-button-primary-disabled};
+    }
 
-.btn-outline-primary {
-  --#{$prefix}btn-color: #{awsui.$color-text-button-normal-default};
-  --#{$prefix}btn-bg: #{awsui.$color-background-button-normal-default};
-  --#{$prefix}btn-border-color: #{awsui.$color-border-button-normal-default};
-  --#{$prefix}btn-hover-color: #{awsui.$color-text-button-normal-hover};
-  --#{$prefix}btn-hover-bg: #{awsui.$color-background-button-normal-hover};
-  --#{$prefix}btn-hover-border-color: #{awsui.$color-border-button-normal-hover};
-  --#{$prefix}btn-active-color: #{awsui.$color-text-button-normal-active};
-  --#{$prefix}btn-active-bg: #{awsui.$color-background-button-normal-active};
-  --#{$prefix}btn-active-border-color: #{awsui.$color-border-button-normal-active};
-  --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
-  --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-normal-disabled};
-  --#{$prefix}btn-disabled-border-color: #{awsui.$color-border-button-normal-disabled};
-}
-
-.btn-outline-secondary {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-secondary-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-secondary-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-secondary-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-secondary-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-secondary-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-secondary-active};
-}
-
-.btn-outline-info {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-info-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-info-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-info-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-info-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-info-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-info-active};
-}
-
-.btn-outline-success {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-success-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-success-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-success-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-success-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-success-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-success-active};
-}
-
-.btn-outline-warning {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-warning-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-warning-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-warning-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-warning-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-warning-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-warning-active};
-}
-
-.btn-outline-danger {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-danger-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-danger-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-danger-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-danger-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-danger-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-danger-active};
-}
-
-.btn-outline-light {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-light-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-light-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-light-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-light-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-light-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-light-active};
-}
-
-.btn-outline-dark {
-  --#{$prefix}btn-hover-color: #{tokens.$color-text-button-outline-dark-hover};
-  --#{$prefix}btn-hover-bg: #{tokens.$color-background-button-outline-dark-hover};
-  --#{$prefix}btn-hover-border-color: #{tokens.$color-border-button-outline-dark-hover};
-  --#{$prefix}btn-active-color: #{tokens.$color-text-button-outline-dark-active};
-  --#{$prefix}btn-active-bg: #{tokens.$color-background-button-outline-dark-active};
-  --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-dark-active};
+    .btn-outline-primary {
+      --#{$prefix}btn-color: #{awsui.$color-text-button-normal-default};
+      --#{$prefix}btn-bg: #{awsui.$color-background-button-normal-default};
+      --#{$prefix}btn-border-color: #{awsui.$color-border-button-normal-default};
+      --#{$prefix}btn-hover-color: #{awsui.$color-text-button-normal-hover};
+      --#{$prefix}btn-hover-bg: #{awsui.$color-background-button-normal-hover};
+      --#{$prefix}btn-hover-border-color: #{awsui.$color-border-button-normal-hover};
+      --#{$prefix}btn-active-color: #{awsui.$color-text-button-normal-active};
+      --#{$prefix}btn-active-bg: #{awsui.$color-background-button-normal-active};
+      --#{$prefix}btn-active-border-color: #{awsui.$color-border-button-normal-active};
+      --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
+      --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-normal-disabled};
+      --#{$prefix}btn-disabled-border-color: #{awsui.$color-border-button-normal-disabled};
+    }
+  } @else {
+    .btn-outline-#{$color} {
+      --#{$prefix}btn-hover-color: #{shade-color($value, 20%)};
+      --#{$prefix}btn-hover-bg: #{tint-color($value, 95%)};
+      --#{$prefix}btn-hover-border-color: #{shade-color($value, 20%)};
+      --#{$prefix}btn-active-color: #{shade-color($value, 25%)};
+      --#{$prefix}btn-active-bg: #{tint-color($value, 80%)};
+      --#{$prefix}btn-active-border-color: #{shade-color($value, 25%)};
+    }
+  }
 }
 
 // Table
