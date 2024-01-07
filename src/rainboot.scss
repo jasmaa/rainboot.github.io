@@ -44,13 +44,19 @@ $form-select-indicator-color: black;
 $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon class='filled stroke-linejoin-round' fill='#{$form-select-indicator-color}' points='2 3 14 3 8 13 2 3'/></svg>");
 
 $form-check-input-width: 1.2em;
-$form-check-input-border: 2px solid #{awsui.$color-border-control-default};
+$form-check-input-border: 2px solid awsui.$color-border-control-default;
 $form-check-input-focus-box-shadow: none;
-$form-check-input-checked-color: #{awsui.$color-foreground-control-default};
-$form-check-input-checked-bg-color: #{awsui.$color-background-control-checked};
+$form-check-input-checked-color: awsui.$color-foreground-control-default;
+$form-check-input-checked-bg-color: awsui.$color-background-control-checked;
 
 $form-feedback-icon-valid: none;
 $form-feedback-icon-invalid: none;
+
+// Accordian
+
+$accordion-button-active-bg: awsui.$color-background-button-normal-active;
+$accordion-button-active-color: awsui.$color-text-button-normal-active;
+$accordion-button-focus-box-shadow: none;
 
 // Alert
 
@@ -59,8 +65,8 @@ $alert-border-width: 0.15rem;
 
 // Breadcrumb
 
-$breadcrumb-divider-color: #{awsui.$color-text-breadcrumb-icon};
-$breadcrumb-active-color: #{awsui.$color-text-breadcrumb-current};
+$breadcrumb-divider-color: awsui.$color-text-breadcrumb-icon;
+$breadcrumb-active-color: awsui.$color-text-breadcrumb-current;
 
 // Badge
 
@@ -95,6 +101,9 @@ $list-group-active-color: awsui.$color-text-button-primary-default;
 $list-group-active-bg: awsui.$color-background-button-primary-default;
 $list-group-disabled-color: awsui.$color-border-button-normal-disabled; // TODO: no disabled text color from awsui
 $list-group-disabled-bg: awsui.$color-background-button-primary-disabled;
+$list-group-hover-bg: awsui.$color-background-button-normal-hover;
+$list-group-action-active-color: awsui.$color-text-button-normal-active;
+$list-group-action-active-bg: awsui.$color-background-button-normal-active;
 
 // Modal
 
@@ -220,20 +229,6 @@ $alert-map: (
   }
 }
 
-// Badge
-
-.badge.bg-primary {
-  background-color: #{awsui.$color-background-notification-blue} !important;
-}
-
-.badge.bg-success {
-  background-color: #{awsui.$color-background-notification-green} !important;
-}
-
-.badge.bg-danger {
-  background-color: #{awsui.$color-background-notification-red} !important;
-}
-
 // Breadcrumb
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -342,6 +337,14 @@ $alert-map: (
   --#{$prefix}btn-active-border-color: #{tokens.$color-border-button-outline-dark-active};
 }
 
+// Table
+
 .table-active {
   border: 0.15rem solid #{awsui.$color-border-item-selected} !important;
+}
+
+// Background
+
+.bg-primary {
+  background-color: #{awsui.$color-background-notification-blue} !important;
 }
