@@ -100,7 +100,7 @@ $list-group-bg: awsui.$color-background-container-content;
 $list-group-border-radius: awsui.$border-radius-container;
 $list-group-active-color: awsui.$color-text-button-primary-default;
 $list-group-active-bg: awsui.$color-background-button-primary-default;
-$list-group-disabled-color: awsui.$color-border-button-normal-disabled; // TODO: no disabled text color from awsui
+$list-group-disabled-color: awsui.$color-text-interactive-disabled;
 $list-group-disabled-bg: awsui.$color-background-button-primary-disabled;
 $list-group-hover-bg: awsui.$color-background-button-normal-hover;
 $list-group-action-active-color: awsui.$color-text-button-normal-active;
@@ -111,6 +111,30 @@ $list-group-action-active-bg: awsui.$color-background-button-normal-active;
 $modal-content-border-radius: awsui.$border-radius-container;
 $modal-header-border-width: 0rem;
 $modal-footer-border-width: 0.08rem;
+
+// Nav & tabs
+
+$nav-link-font-size: 1rem;
+$nav-link-color: awsui.$color-text-interactive-default;
+$nav-link-disabled-color: awsui.$color-text-interactive-disabled;
+$nav-tabs-link-hover-color: awsui.$color-text-link-hover;
+$nav-tabs-link-active-color: awsui.$color-text-link-default;
+$nav-underline-link-active-color: awsui.$color-text-link-default;
+$nav-underline-border-width: 0.2rem;
+
+// Pagination
+
+$pagination-color: awsui.$color-text-interactive-default;
+$pagination-border-width: 0rem;
+$pagination-focus-box-shadow: none;
+$pagination-focus-color: awsui.$color-text-interactive-active;
+$pagination-focus-bg: none;
+$pagination-hover-color: awsui.$color-text-interactive-hover;
+$pagination-hover-bg: none;
+$pagination-active-color: awsui.$color-text-interactive-active;
+$pagination-active-bg: none;
+$pagination-disabled-color: awsui.$color-text-interactive-disabled;
+$pagination-disabled-bg: none;
 
 @import "bootstrap/scss/variables";
 
@@ -257,7 +281,7 @@ $alert-map: (
       --#{$prefix}btn-active-color: #{awsui.$color-text-button-primary-active};
       --#{$prefix}btn-active-bg: #{awsui.$color-background-button-primary-active};
       --#{$prefix}btn-active-border-color: #{awsui.$color-background-button-primary-active};
-      --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
+      --#{$prefix}btn-disabled-color: #{awsui.$color-text-interactive-disabled};
       --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-primary-disabled};
       --#{$prefix}btn-disabled-border-color: #{awsui.$color-background-button-primary-disabled};
     }
@@ -272,7 +296,7 @@ $alert-map: (
       --#{$prefix}btn-active-color: #{awsui.$color-text-button-normal-active};
       --#{$prefix}btn-active-bg: #{awsui.$color-background-button-normal-active};
       --#{$prefix}btn-active-border-color: #{awsui.$color-border-button-normal-active};
-      --#{$prefix}btn-disabled-color: #{awsui.$color-border-button-normal-disabled}; // TODO: no disabled text color from awsui
+      --#{$prefix}btn-disabled-color: #{awsui.$color-text-interactive-disabled};
       --#{$prefix}btn-disabled-bg: #{awsui.$color-background-button-normal-disabled};
       --#{$prefix}btn-disabled-border-color: #{awsui.$color-border-button-normal-disabled};
     }
