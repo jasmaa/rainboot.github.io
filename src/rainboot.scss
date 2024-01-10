@@ -136,6 +136,12 @@ $pagination-active-bg: none;
 $pagination-disabled-color: awsui.$color-text-interactive-disabled;
 $pagination-disabled-bg: none;
 
+// Progress bar
+
+$progress-height: 0.2rem;
+$progress-bar-color: awsui.$color-background-button-primary-disabled;
+$progress-bar-bg: awsui.$color-background-button-primary-default;
+
 @import "bootstrap/scss/variables";
 
 $form-validation-states: map-merge($form-validation-states, (
