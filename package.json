@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "sass -w src/rainboot.scss:build/rainboot.css --load-path=node_modules",
-    "build": "sass src/rainboot.scss:build/rainboot.css --load-path=node_modules",
-    "clean": "rimraf build/rainboot.css build/rainboot.css.map"
+    "start": "nodemon --watch src --ext scss esbuild.mjs",
+    "build": "node esbuild.mjs",
+    "clean": "rimraf build/rainboot.css build/rainboot.min.css"
   },
   "devDependencies": {
     "@cloudscape-design/design-tokens": "^3.0.31",
     "bootstrap": "^5.3.2",
+    "esbuild": "^0.19.11",
+    "esbuild-sass-plugin": "^2.16.1",
+    "nodemon": "^3.0.2",
     "rimraf": "^5.0.5"
   }
 }
