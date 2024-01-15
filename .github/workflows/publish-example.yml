@@ -28,5 +28,5 @@ jobs:
       - name: Deploy example
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./examples/demo
+          folder: ./examples/demo/build
           single-commit: true
