@@ -1,0 +1,32 @@
+name: Publish example demo
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+      - name: Build
+        run: yarn build
+      - name: Demo - Install dependencies
+        working-directory: ./examples/demo
+        run: yarn install --immutable --immutable-cache --check-cache
+      - name: Demo - Build
+        working-directory: ./examples/demo
+        run: yarn build
+      - name: Deploy example
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./examples/demo
+          single-commit: true
