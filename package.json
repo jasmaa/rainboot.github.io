@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "nodemon --watch src --ext scss esbuild.mjs",
-    "build": "node esbuild.mjs",
-    "clean": "rimraf build/rainboot.css build/rainboot.min.css"
+    "start": "nodemon --watch src --ext scss build.mjs",
+    "build": "node build.mjs",
+    "clean": "rimraf build"
   },
   "devDependencies": {
     "@cloudscape-design/design-tokens": "^3.0.31",
