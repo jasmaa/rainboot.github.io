@@ -1,6 +1,6 @@
 # rainboot.css
 
-A Cloudscape-like Bootstrap theme
+Bootstrap with the look of Cloudscape
 
 ## Getting started
 
