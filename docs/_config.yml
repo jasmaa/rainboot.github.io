@@ -49,3 +49,8 @@ plugins:
 #   - vendor/ruby/
 
 highlighter: rouge
+
+collections:
+  components:
+    output: true
+    permalink: /documentation/:collection/:slug
