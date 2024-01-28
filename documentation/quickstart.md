@@ -9,7 +9,7 @@ description: A quickstart guide to getting started with rainboot.css
 Create or choose a folder to be your workspace.
 
 Go to the [rainboot.css releases
-page](https://github.com/jasmaa/rainboot.css/releases) and download
+page](https://github.com/rainboot/rainboot.css/releases) and download
 `rainboot.css` (or `rainboot.min.css`) from the latest release and put it in
 your workspace.
 
